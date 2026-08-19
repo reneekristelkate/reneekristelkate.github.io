@@ -47,6 +47,15 @@
   let navbarlinks = select('#navbar .scrollto', true)
   const navbarlinksActive = () => {
     let position = window.scrollY + 200
+    let isAtPageBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2
+
+    if (isAtPageBottom) {
+      navbarlinks.forEach(navbarlink => navbarlink.classList.remove('active'))
+      let contactLink = select('#navbar a[href="#contact"]')
+      if (contactLink) contactLink.classList.add('active')
+      return
+    }
+
     navbarlinks.forEach(navbarlink => {
       if (!navbarlink.hash) return
       let section = select(navbarlink.hash)
