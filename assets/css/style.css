@@ -538,6 +538,43 @@ section {
   border: 2px solid #d05000;
 }
 
+.resume-order-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.resume-order-column {
+  display: contents;
+}
+
+.resume-order-group {
+  order: 0;
+}
+
+.resume-summary {
+  order: 1;
+}
+
+.resume-experience {
+  order: 2;
+}
+
+.resume-certificates {
+  order: 4;
+}
+
+.resume-education {
+  order: 3;
+}
+
+.resume-awards {
+  order: 5;
+}
+
+.resume-scholarships {
+  order: 6;
+}
+
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
